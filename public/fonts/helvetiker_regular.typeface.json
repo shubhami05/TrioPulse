@@ -1,0 +1,35 @@
+{
+  "glyphs": {
+    "T": {"ha": 611, "x_min": 0, "x_max": 611, "o": "M 0 0 L 611 0 L 611 100 L 356 100 L 356 700 L 256 700 L 256 100 L 0 100 Z"},
+    "R": {"ha": 722, "x_min": 0, "x_max": 722, "o": "M 0 0 L 100 0 L 100 300 L 400 300 C 500 300 600 400 600 500 C 600 600 500 700 400 700 L 0 700 Z M 100 400 L 100 600 L 400 600 C 450 600 500 550 500 500 C 500 450 450 400 400 400 Z"},
+    "I": {"ha": 278, "x_min": 0, "x_max": 278, "o": "M 89 0 L 189 0 L 189 700 L 89 700 Z"},
+    "O": {"ha": 778, "x_min": 0, "x_max": 778, "o": "M 389 -14 C 566 -14 707 127 707 350 C 707 573 566 714 389 714 C 212 714 71 573 71 350 C 71 127 212 -14 389 -14 Z M 389 86 C 266 86 171 198 171 350 C 171 502 266 614 389 614 C 512 614 607 502 607 350 C 607 198 512 86 389 86 Z"},
+    "P": {"ha": 667, "x_min": 0, "x_max": 667, "o": "M 0 0 L 100 0 L 100 300 L 400 300 C 500 300 600 400 600 500 C 600 600 500 700 400 700 L 0 700 Z M 100 400 L 100 600 L 400 600 C 450 600 500 550 500 500 C 500 450 450 400 400 400 Z"},
+    "U": {"ha": 722, "x_min": 0, "x_max": 722, "o": "M 79 259 L 79 0 L 179 0 L 179 259 C 179 464 287 614 444 614 C 601 614 709 464 709 259 L 709 0 L 809 0 L 809 259 C 809 518 661 714 444 714 C 227 714 79 518 79 259 Z"},
+    "L": {"ha": 556, "x_min": 0, "x_max": 556, "o": "M 0 0 L 100 0 L 100 600 L 500 600 L 500 700 L 0 700 Z"},
+    "S": {"ha": 667, "x_min": 0, "x_max": 667, "o": "M 33 232 L 133 232 C 133 143 203 86 333 86 C 463 86 533 143 533 232 C 533 321 463 378 333 378 C 203 378 133 435 133 524 C 133 613 203 670 333 670 C 463 670 533 613 533 524 L 633 524 C 633 667 513 770 333 770 C 153 770 33 667 33 524 C 33 381 153 278 333 278 C 513 278 633 175 633 32 C 633 -111 513 -214 333 -214 C 153 -214 33 -111 33 32 Z"},
+    "E": {"ha": 667, "x_min": 0, "x_max": 667, "o": "M 0 0 L 600 0 L 600 100 L 100 100 L 100 300 L 500 300 L 500 400 L 100 400 L 100 600 L 600 600 L 600 700 L 0 700 Z"}
+  },
+  "familyName": "Helvetiker",
+  "ascender": 800,
+  "descender": -200,
+  "underlinePosition": -100,
+  "underlineThickness": 50,
+  "boundingBox": {
+    "yMin": -214,
+    "xMin": 0,
+    "yMax": 714,
+    "xMax": 809
+  },
+  "resolution": 1000,
+  "original_font_information": {
+    "format": 0,
+    "copyright": "Copyright (c) 2010-2011 by tyPoland Lukasz Dziedzic with Reserved Font Name 'Lato'. Licensed under the SIL Open Font License, Version 1.1.",
+    "fontFamily": "Helvetiker",
+    "fontSubfamily": "Regular",
+    "uniqueID": "tyPoland Lukasz Dziedzic: Helvetiker Regular: 2011",
+    "fullName": "Helvetiker Regular",
+    "version": "Version 1.0",
+    "postScriptName": "Helvetiker-Regular"
+  }
+}
