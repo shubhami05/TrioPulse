@@ -4,6 +4,8 @@ import { OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { Code, Globe, Cloud, Bot, ArrowRight, Server, Database, Image, MessageSquare, Sparkles } from 'lucide-react';
 import CodeMatrix from '../components/CodeMatrix';
+import chatbot from '../../public/ai-chatbot-.png';
+import website from '../../public/website-with-stunning-visuals.png';
 
 function Scene() {
   return (
@@ -105,7 +107,7 @@ export default function IT() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-green-500/20 rounded-lg blur-xl" />
                   <img
-                    src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&q=80&w=800"
+                    src={website}
                     alt="Web Development"
                     className="rounded-lg shadow-xl relative"
                   />
@@ -260,7 +262,7 @@ export default function IT() {
               <div className="flex-1 relative">
                 <div className="absolute inset-0 bg-green-500/20 rounded-lg blur-xl" />
                 <img
-                  src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80&w=800"
+                  src={chatbot}
                   alt="AI Chatbot Interface"
                   className="rounded-lg shadow-xl relative w-full h-full object-cover"
                 />

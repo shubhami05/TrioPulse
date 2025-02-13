@@ -2,8 +2,11 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float } from '@react-three/drei';
 import { motion } from 'framer-motion';
-import { Rocket, TrendingUp, Target, BarChart, ArrowRight } from 'lucide-react';
+import { Rocket, TrendingUp, Target, BarChart, ArrowRight, Users } from 'lucide-react';
 import WaveField from '../components/WaveField';
+import influencer from '../../public/social-media-influencer-marketing.png';
+import post from '../../public/social-media-design-post.png'
+import seomgt from '../../public/strategic-social-media-management--.png'
 
 function Scene() {
   return (
@@ -64,7 +67,7 @@ export default function Marketing() {
       {/* Services Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="space-y-24">
-          {/* Digital Marketing */}
+          {/* Influencer Marketing */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -72,33 +75,33 @@ export default function Marketing() {
             className="flex flex-col md:flex-row items-center gap-12"
           >
             <div className="flex-1">
-              <TrendingUp className="w-16 h-16 text-blue-500 mb-6" />
-              <h2 className="text-3xl font-bold mb-4">Digital Marketing</h2>
+              <Users className="w-16 h-16 text-blue-500 mb-6" />
+              <h2 className="text-3xl font-bold mb-4">Influencer Marketing</h2>
               <p className="text-gray-400 mb-6">
-                Transform your online presence with our comprehensive digital marketing solutions. 
-                We combine data analytics, creative strategies, and cutting-edge tools to drive 
-                measurable results for your business.
+                Connect with your target audience through authentic partnerships with influential creators. 
+                Our influencer marketing strategies help you build trust, increase brand awareness, and 
+                drive meaningful engagement.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center text-gray-300">
                   <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                  Performance Marketing
+                  Influencer Discovery & Vetting
                 </li>
                 <li className="flex items-center text-gray-300">
                   <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                  Email Marketing Campaigns
+                  Campaign Strategy & Management
                 </li>
                 <li className="flex items-center text-gray-300">
                   <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                  Marketing Automation
+                  Performance Analytics & ROI Tracking
                 </li>
               </ul>
             </div>
             <div className="flex-1 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur-2xl opacity-20" />
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
-                alt="Digital Marketing"
+                src={influencer}
+                alt="Influencer Marketing"
                 className="relative rounded-2xl shadow-2xl"
               />
             </div>
@@ -137,7 +140,7 @@ export default function Marketing() {
             <div className="flex-1 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur-2xl opacity-20" />
               <img
-                src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800"
+                src={post}
                 alt="Social Media"
                 className="relative rounded-2xl shadow-2xl"
               />
@@ -177,7 +180,7 @@ export default function Marketing() {
             <div className="flex-1 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-green-400 rounded-2xl blur-2xl opacity-20" />
               <img
-                src="https://images.unsplash.com/photo-1572177812156-58036aae439c?auto=format&fit=crop&q=80&w=800"
+                src={seomgt}
                 alt="SEO"
                 className="relative rounded-2xl shadow-2xl"
               />

@@ -5,9 +5,13 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
   Play, Rocket, Code, Camera, ChevronDown, Trophy, Users, 
   Target, Zap, ExternalLink, Palette, Layout, Smartphone, 
-  Database, Send, Mail, User, Phone, MessageSquare 
+  Database, Send, Mail, User, Phone, MessageSquare, Sparkles,
+  Bot, Image, Wand2, BrainCircuit
 } from 'lucide-react';
 import HeroScene from '../components/HeroScene';
+import digitalmarketing from '../../public/digital-marketing-picture.png';
+import videoediting from '../../public/graphic-video-editing-team-.png';
+import softwareimage from '../../public/it-software-related-image.png';
 
 function Scene() {
   return (
@@ -27,7 +31,7 @@ function Scene() {
   );
 }
 
-function ProjectCard({ image, title, category, description, index }:any) {
+function ProjectCard({ image, title, category, description, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -51,7 +55,7 @@ function ProjectCard({ image, title, category, description, index }:any) {
           className="absolute inset-0 flex items-center justify-center"
         >
           <button className="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold flex items-center gap-2 hover:bg-gray-100 transition-colors">
-            View Project <ExternalLink className="w-4 h-4" />
+            Learn More <ExternalLink className="w-4 h-4" />
           </button>
         </motion.div>
       </div>
@@ -72,7 +76,7 @@ function ProjectCard({ image, title, category, description, index }:any) {
   );
 }
 
-function ServiceCard({ icon: Icon, title, description, skills, color, index }:any) {
+function ServiceCard({ icon: Icon, title, description, skills, color, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -94,7 +98,7 @@ function ServiceCard({ icon: Icon, title, description, skills, color, index }:an
         <p className="text-gray-400 mb-6">{description}</p>
         
         <div className="space-y-3">
-          {skills.map((skill:any, i:any) => (
+          {skills.map((skill, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, x: -10 }}
@@ -231,9 +235,9 @@ function Home() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
 
   return (
-    <div className="container">
+    <div className="w-full">
       {/* Hero Section */}
-      <div className="h-screen relative overflow-hidden ">
+      <div className="h-screen relative overflow-hidden">
         <div className="absolute inset-0">
           <Scene />
         </div>
@@ -287,8 +291,7 @@ function Home() {
         </div>
 
         {/* Stats Section */}
-        <div className="absolute bottom-0  w-full bg-gradient-to-t from-black to-transparent">
-
+        <div className="absolute bottom-0 w-full bg-gradient-to-t from-black to-transparent">
           <div className="container mx-auto px-4 py-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <motion.div
@@ -297,7 +300,7 @@ function Home() {
                 transition={{ delay: 0.2 }}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-blue-500">100+</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-500">10+</div>
                 <div className="text-sm text-gray-400">Clients Worldwide</div>
               </motion.div>
               <motion.div
@@ -306,7 +309,7 @@ function Home() {
                 transition={{ delay: 0.4 }}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-purple-500">250+</div>
+                <div className="text-3xl md:text-4xl font-bold text-purple-500">9+</div>
                 <div className="text-sm text-gray-400">Projects Completed</div>
               </motion.div>
               <motion.div
@@ -315,7 +318,7 @@ function Home() {
                 transition={{ delay: 0.6 }}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-pink-500">15+</div>
+                <div className="text-3xl md:text-4xl font-bold text-pink-500">2+</div>
                 <div className="text-sm text-gray-400">Years Experience</div>
               </motion.div>
               <motion.div
@@ -332,8 +335,8 @@ function Home() {
         </div>
       </div>
 
-      {/* Featured Projects Section */}
-      <div className="py-20 bg-gradient-to-b from-black to-gray-900 ">
+      {/* Our Services Section */}
+      <div className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -346,10 +349,10 @@ function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+              <h2 className="text-4xl font-bold mb-4">Our Services</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Explore our latest work and success stories that showcase our expertise
-                in delivering exceptional digital solutions
+                Discover our comprehensive range of services designed to elevate your digital presence
+                and drive business growth
               </p>
             </motion.div>
           </motion.div>
@@ -357,24 +360,24 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard
               index={0}
-              image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
-              title="Global Tech Solutions"
-              category="Digital Marketing"
-              description="Comprehensive digital marketing campaign that increased conversions by 150%"
+              image={digitalmarketing}
+              title="Digital Marketing"
+              category="Marketing"
+              description="Strategic digital marketing solutions to boost your online presence and drive growth"
             />
             <ProjectCard
               index={1}
-              image="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800"
-              title="Creative Vision"
-              category="Media Production"
-              description="Award-winning video production for a major brand launch"
+              image={videoediting}
+              title="Media Production"
+              category="Media"
+              description="Professional media production services for impactful visual content"
             />
             <ProjectCard
               index={2}
-              image="https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&q=80&w=800"
-              title="NextGen Platform"
-              category="IT Solutions"
-              description="Custom enterprise software solution for seamless operations"
+              image={softwareimage}
+              title="IT Solutions"
+              category="Technology"
+              description="Cutting-edge IT solutions and custom software development"
             />
           </div>
         </div>
@@ -434,6 +437,122 @@ function Home() {
               "Progressive Web Apps"
             ]}
           />
+        </div>
+      </div>
+
+      {/* AI Capabilities Section */}
+      <div className="py-24 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/5 bg-grid-8" />
+        <div className="container mx-auto px-4 relative">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <BrainCircuit className="w-16 h-16 mx-auto text-purple-500 mb-6" />
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+              Powered by Advanced AI
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the future of digital creation with our proprietary AI technology
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative bg-black/50 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8">
+                <Image className="w-12 h-12 text-purple-500 mb-6" />
+                <h3 className="text-2xl font-bold mb-4">Image Generation</h3>
+                <p className="text-gray-400">
+                  Create stunning visuals from text descriptions. Perfect for marketing materials, 
+                  social media content, and creative projects.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-red-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative bg-black/50 backdrop-blur-sm border border-pink-500/20 rounded-2xl p-8">
+                <Wand2 className="w-12 h-12 text-pink-500 mb-6" />
+                <h3 className="text-2xl font-bold mb-4">Image Editing</h3>
+                <p className="text-gray-400">
+                  Advanced AI-powered editing tools for professional-grade image manipulation, 
+                  enhancement, and transformation.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative bg-black/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8">
+                <Bot className="w-12 h-12 text-red-500 mb-6" />
+                <h3 className="text-2xl font-bold mb-4">AI Assistant</h3>
+                <p className="text-gray-400">
+                  Intelligent automation for content creation, analysis, and optimization. 
+                  Let AI streamline your workflow.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="max-w-4xl mx-auto bg-gradient-to-r from-purple-900/50 via-pink-900/50 to-red-900/50 rounded-3xl p-8 md:p-12 border border-purple-500/20"
+          >
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-3xl font-bold mb-4">Experience the Power of AI</h3>
+                <p className="text-gray-300 mb-6">
+                  Our custom-built AI technology combines cutting-edge machine learning with 
+                  intuitive design to deliver exceptional results for your creative and business needs.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-3" />
+                    State-of-the-art image generation
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-pink-500 rounded-full mr-3" />
+                    Advanced editing capabilities
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3" />
+                    Intelligent automation tools
+                  </li>
+                </ul>
+                <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-purple-500/30 transition-all flex items-center gap-2">
+                  Try it Now <Sparkles className="w-4 h-4" />
+                </button>
+              </div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-2xl" />
+                <img
+                  src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&q=80&w=800"
+                  alt="AI Technology"
+                  className="rounded-2xl shadow-2xl relative"
+                />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
 

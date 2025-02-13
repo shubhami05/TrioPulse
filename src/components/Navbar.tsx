@@ -28,9 +28,9 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-white font-bold text-xl">
-            TRIOPULSE
+        <div className="flex items-center justify-between h-24">
+          <Link to="/" className="text-white font-bold text-2xl tracking-wide">
+            Triopulse
           </Link>
 
           {/* Desktop Navigation */}
