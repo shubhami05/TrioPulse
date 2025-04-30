@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-black text-white">
-        <Navbar />
+       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/marketing/*" element={<Marketing />} />
