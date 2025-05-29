@@ -31,7 +31,7 @@ function Scene() {
   );
 }
 
-function ProjectCard({ image, title, category, description, index }) {
+function ProjectCard({ image, title, category, description, index }:any) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
