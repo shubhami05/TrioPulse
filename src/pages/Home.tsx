@@ -76,7 +76,7 @@ function ProjectCard({ image, title, category, description, index }:any) {
   );
 }
 
-function ServiceCard({ icon: Icon, title, description, skills, color, index }) {
+function ServiceCard({ icon: Icon, title, description, skills, color, index }:any) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ function ServiceCard({ icon: Icon, title, description, skills, color, index }) {
         <p className="text-gray-400 mb-6">{description}</p>
         
         <div className="space-y-3">
-          {skills.map((skill, i) => (
+          {skills.map((skill:any, i:any) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, x: -10 }}
