@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate, useNavigation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -24,12 +24,17 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const location = useNavigate();
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[location])
 
   return (
     <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
-          <Link to="/" className="text-white font-bold text-2xl tracking-wide">
+          <Link to="/" onClick={()=>{window.scrollTo(0,0)}} className="text-white font-bold text-2xl tracking-wide">
             Triopulse
           </Link>
 

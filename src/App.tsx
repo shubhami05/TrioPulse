@@ -9,8 +9,8 @@ import IT from './pages/IT';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-black text-white">
-       
+      <div className="min-h-screen main-body bg-black text-white">
+       <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/marketing/*" element={<Marketing />} />
